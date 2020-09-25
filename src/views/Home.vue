@@ -16,7 +16,9 @@ export default {
     };
   },
   created() {
-    this.botdata = getData.getFakeData();
+    getData.getRealData().then((res) => {
+      this.botdata = res;
+    });
   }
 };
 </script>
